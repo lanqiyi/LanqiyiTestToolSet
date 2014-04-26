@@ -1,0 +1,8 @@
+<h1>Jobs</h1>
+<ul>
+{% for job in object_list %}
+    <li>{{ job.pub_date|date }} - {{ job.title }}</li>
+{% empty %}
+    <li>No jobs yet.</li>
+{% endfor %}
+</ul>
